@@ -21,7 +21,7 @@ The fact you have to use the full package nam in XML files is annoying, right?
 So, let's use our Custom Inflater library:
 ```java
   CustomInflater inflater = new CustomInflater(LayoutInflater.from(this), this);
-	setContentView(inflater.inflate(R.layout.activity_main, null));
+  setContentView(inflater.inflate(R.layout.activity_main, null));
 ```
 or if you have a inflater already:
 ```java
@@ -33,6 +33,11 @@ now you can simplify your XML code like this:
   <DarkSide android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="MAGIC"></DarkSide>
+```
+
+Also you can define custom prefixes:
+```java
+inflater.addPrefix("my.package.name");
 ```
         
         
