@@ -17,7 +17,7 @@ Java:
   setContentView(R.layout.activity_main);
 ```
   
-The fact you have to use the full package nam in XML files is annoying, right?
+The fact you have to use the full package nams in XML files is annoying, right?
 So, let's use our Custom Inflater library:
 ```java
   CustomInflater inflater = new CustomInflater(LayoutInflater.from(this), this);
