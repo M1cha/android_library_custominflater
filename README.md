@@ -5,25 +5,35 @@ This is a simple library to allow using custom prefixes in XML files.
 
 A short example:
 XML:
+```xml
   ...
   <android.app.test.DarkSide android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="MAGIC"></android.app.test.DarkSide>
   ...
+```
 Java:
+```java
   setContentView(R.layout.activity_main);
+```
   
 The fact you have to use the full package nam in XML files is annoying, right?
 So, let's use our Custom Inflater library:
+```java
   CustomInflater inflater = new CustomInflater(LayoutInflater.from(this), this);
 	setContentView(inflater.inflate(R.layout.activity_main, null));
+```
 or if you have a inflater already:
+```java
   inflater = new CustomInflater(inflater, inflater.getContext());
+```
   
 now you can simplify your XML code like this:
+```xml
   <DarkSide android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="MAGIC"></DarkSide>
+```
         
         
 Credits
